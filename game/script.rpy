@@ -4,7 +4,7 @@
 # eg. image eileen happy = "eileen_happy.png"
 
 # Declare characters used by this game.
-define h = Character('', color="#c8ffc8")
+define h_intro = Character('', color="#c8ffc8", size=24)
 
 #images
 init:
@@ -18,11 +18,15 @@ label start:
 
     scene bg black
 
-    show text "Witaj, przyjacielu..." with dissolve
-    with Pause(2)
+    centered "{size=48}Hello, friend{/size}"
+    
 
-    hide text with dissolve
+    hide text
     with Pause(1)
 
+    centered "{size=36}It's good to see you.{/size}"
+
+    hide text
+    with Pause(1)
 
     return
