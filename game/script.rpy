@@ -5,10 +5,13 @@
 
 # Declare characters used by this game.
 define e = Character('Eileen', color="#c8ffc8")
-
+init:
+    image bg black = "#000000"
 
 # The game starts here.
 label start:
+
+    scene bg black
 
     e "Utworzyłeś grę na Ren'Py."
 
