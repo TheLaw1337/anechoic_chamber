@@ -4,11 +4,12 @@
 # eg. image eileen happy = "eileen_happy.png"
 
 # Declare characters used by this game.
-define h_intro = Character('', color="#c8ffc8", size=24)
+define h = Character('', color="#c8ffc8")
 
 #images
 init:
     image bg black = "#000000"
+    image bg room = "room.jpg"
 
 
 # The game starts here.
@@ -18,15 +19,15 @@ label start:
 
     scene bg black
 
-    centered "{size=48}Hello, friend{/size}"
+    centered "{size=24}That's story happened some time ago...{/size}" with fade
     
 
-    hide text
-    with Pause(1)
+    hide text with fade
 
-    centered "{size=36}It's good to see you.{/size}"
+    scene bg room with fade
 
-    hide text
-    with Pause(1)
+    h "Home sweet home"
+    
 
-    return
+
+return
