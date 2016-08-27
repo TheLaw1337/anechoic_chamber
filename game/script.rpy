@@ -10,8 +10,8 @@ define e = Character('Eileen', color="#c8ffc8")
 # The game starts here.
 label start:
 
-    e "You've created a new Ren'Py game."
+    e "Utworzyłeś grę na Ren'Py."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    e "Dodaj tylko historię, obrazy i muzykę, potem możesz ją puścić w świat!"
 
     return
