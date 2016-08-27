@@ -4,12 +4,13 @@
 # eg. image eileen happy = "eileen_happy.png"
 
 # Declare characters used by this game.
-define h = Character('', color="#c8ffc8")
-
+define n = Character('Narrator', color="#c8ffc8")
+define l = Character('Lucas', color="#FF0000")
 #images
 init:
     image bg black = "#000000"
     image bg room = "room.jpg"
+    image bg news = "news3.jpg"
 
 
 # The game starts here.
@@ -26,7 +27,13 @@ label start:
 
     scene bg room with fade
 
-    h "Home sweet home"
+    n "Lucas returned home..."
+    l "Home sweet home."
+    n "...sitted on the desk...{p=1.0}...and switched on computer."
+
+    scene bg news with fade
+
+    l "What the..."
     
 
 
