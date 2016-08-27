@@ -4,17 +4,25 @@
 # eg. image eileen happy = "eileen_happy.png"
 
 # Declare characters used by this game.
-define e = Character('Eileen', color="#c8ffc8")
+define h = Character('', color="#c8ffc8")
+
+#images
 init:
     image bg black = "#000000"
 
+
 # The game starts here.
+
+
 label start:
 
     scene bg black
 
-    e "Utworzyłeś grę na Ren'Py."
+    show text "Witaj, przyjacielu..." with dissolve
+    with Pause(2)
 
-    e "Dodaj tylko historię, obrazy i muzykę, potem możesz ją puścić w świat!"
+    hide text with dissolve
+    with Pause(1)
+
 
     return
