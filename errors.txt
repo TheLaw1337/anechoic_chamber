@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 23: expected statement.
-    Dissolve(1)
-               ^
+File "game/script.rpy", line 80: could not parse statement.
+    play music "wire.wav" noloop with dissolve
+                                 ^
 
 Ren'Py Version: Ren'Py 6.99.10.1227

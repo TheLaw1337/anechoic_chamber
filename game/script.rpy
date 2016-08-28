@@ -15,6 +15,10 @@ init:
     image columns = "columns2.png"
     image bg factory2 = "factory2.jpg"
     image bg park = "park.png"
+    image bg leak = "leak.jpg"
+    image bg graffiti = "graffiti.jpg"
+    image bg terrain = "terrain.jpg"
+    image bg private = "private_terrain.jpg"
 
 # The game starts here.
 
@@ -57,7 +61,40 @@ label start:
 
     scene bg park with dissolve
 
-    l "The park has a long alley. Along the alley flows a little river."
+    n "The park has a long alley. Along the alley flows a little river.{p=1.0}Summer will end soon."
 
+    scene bg graffiti with dissolve
+    
+    l "Ehh, that local art..."
 
+    scene bg park with dissolve
+
+    n "And then..." 
+
+    scene bg leak with dissolve
+
+    l "Hm...very interesting...{p=2.0}Maybe I'll go inside?{p=2.0}YOLO!!!"
+
+    
+    scene bg black with fade
+
+    play music "wire.wav" noloop
+
+    $ renpy.pause(2)
+
+    scene bg terrain with dissolve
+
+    l "Hm...Coraz mniej tego zostało.{p=1.0}I'll look around."  #nie wiem jak to pierwsze przetłumaczyć
+
+    scene bg black with fade
+
+    play music "footsteps.wav" noloop
+
+    $ renpy.pause(3)
+
+    scene bg private with dissolve
+
+    n "PRIVATE PROPERTY - NO TRESSPASSING" 
+
+    l "Fuck this..."
 return
