@@ -280,4 +280,4 @@ init -1 python hide:
 
     #########################################
     ## More customizations can go here.
-    _preferences.text_cps = 10
+    _preferences.text_cps = 20
