@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 80: could not parse statement.
-    play music "wire.wav" noloop with dissolve
-                                 ^
+File "game/script.rpy", line 269: expected simple expression
+    play music "attackpad.mp3" loop fadeout=1.0 fadein=1.0
+                                           ^
 
 Ren'Py Version: Ren'Py 6.99.10.1227

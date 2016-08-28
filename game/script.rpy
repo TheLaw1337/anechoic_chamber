@@ -31,6 +31,8 @@ init:
     image bg floor = "floor.jpg"
     image bg book = "book.jpg"
     image bg chamber = "chamber.jpg"
+    image bg beers = "beers.jpg"
+    image bg chamber_inside = "chamber_inside.jpg"
 
 
     $ flash = Fade(.25, 0, .75, color="#fff")
@@ -183,6 +185,16 @@ label start:
 
     l "Maybe here will be something interesting..."
 
+    scene bg beers with dissolve
+
+    l "Another trace of hobos..." #kolejny ślad po żulach (butelki po piwie)
+
+    play music "camerashot.wav" noloop
+
+    scene bg beers with flash
+
+    $ renpy.pause(1)
+
     scene bg book with dissolve
 
     l "That's been a good photo..."
@@ -244,9 +256,21 @@ label start:
 
     $ renpy.pause(6)
 
-    scene bg book with dissolve
+    scene bg chamber_inside with dissolve
 
-    l "TODO"
+    play music "heartbeat.wav" loop
+
+    l "WOW! That's true!"
+    l "My dream is coming real..."
+
+    n "Lucas listened his heartbeat..."
+
+    stop music
+    $ renpy.music.play("attackpad.mp3",loop=True,fadeout=1.0,fadein=1.0) 
+
+    $ renpy.pause(3)
+
+    n "What the..."
 
 
 
