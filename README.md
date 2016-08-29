@@ -1,5 +1,5 @@
-# anechoic_chamber
-Anechoic Chamber  - VN game for Ludum Dare 36 by Daniel "TheLaw" Sobczak
+# Anechoic Chamber
+VN game for Ludum Dare 36 by Daniel "TheLaw1337" Sobczak
 
 My first game ever for Ludum Dare 36.
 Special thanks to:
