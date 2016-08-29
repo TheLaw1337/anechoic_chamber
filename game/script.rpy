@@ -64,11 +64,13 @@ label start:
 
     hide text with fade
 
+    play music "door.wav" noloop
+
     scene bg room with fade
 
     n "Lucas came back home..."
     l "Home, sweet home."
-    n "...sat in a chair...{p=1.0}...and turned computer on ."
+    n "...sat in a chair...{p=1.0}...and turned computer on."
 
     scene bg news with dissolve 
     with Pause(1)
@@ -91,7 +93,11 @@ label start:
 
     l "I need some fresh air, I'll go for a walk."
 
-    scene bg park with dissolve
+    play music "door.wav" noloop
+
+    scene bg park with fade
+
+    play music "park.wav"
 
     n "The park has a long alley. Along the alley flows a little river.{p=1.0}Summer will end soon."
 
@@ -110,7 +116,7 @@ label start:
     
     scene bg black with fade
 
-    play music "wire.wav" noloop
+    play sound "wire.wav" noloop
 
     $ renpy.pause(2)
 
@@ -120,7 +126,7 @@ label start:
 
     scene bg black with fade
 
-    play music "footsteps.wav" noloop
+    play sound "footsteps.wav" noloop
 
     $ renpy.pause(3)
 
@@ -138,7 +144,7 @@ label start:
 
     l "Hobos were here..." #chodzi mi o żuli
 
-    play music "camerashot.wav" noloop
+    play sound "camerashot.wav" noloop
 
     scene bg terrain2 with flash
 
@@ -148,7 +154,7 @@ label start:
 
     l "Rubbish, rubbish, rubbish." #zdjęcie dołu ze śmieciami
 
-    play music "camerashot.wav" noloop
+    play sound "camerashot.wav" noloop
 
     scene bg rubbish with flash
 
@@ -162,7 +168,7 @@ label start:
 
     l "Yet another one of many bricks here."
 
-    play music "camerashot.wav" noloop
+    play sound "camerashot.wav" noloop
 
     scene bg brick with flash
 
@@ -172,7 +178,7 @@ label start:
 
     l "Cables from factory's bloodstream."
 
-    play music "camerashot.wav" noloop
+    play sound "camerashot.wav" noloop
 
     scene bg cables with flash
 
@@ -182,7 +188,7 @@ label start:
 
     l "This place was electroplating factory." #galwanizernia, przynajmniej tak powiedział Wujek Google :D
 
-    play music "camerashot.wav" noloop
+    play sound "camerashot.wav" noloop
 
     scene bg electroplating with flash
 
@@ -192,7 +198,7 @@ label start:
 
     l "Hm...{p=1.0}"
 
-    play music "footsteps.wav" noloop
+    play sound "footsteps.wav" noloop
 
     $ renpy.pause(1.5)
 
@@ -204,7 +210,7 @@ label start:
 
     l "Another trace of hobos..." #kolejny ślad po żulach (butelki po piwie)
 
-    play music "camerashot.wav" noloop
+    play sound "camerashot.wav" noloop
 
     scene bg beers with flash
 
@@ -214,7 +220,7 @@ label start:
 
     l "That's been a good photo..."
 
-    play music "camerashot.wav" noloop
+    play sound "camerashot.wav" noloop
 
     scene bg book with flash
 
@@ -222,7 +228,7 @@ label start:
 
     l "Done." 
 
-    play music "footsteps.wav" noloop
+    play sound "footsteps.wav" noloop
 
     $ renpy.pause(3)
 
@@ -234,7 +240,7 @@ label start:
 
     scene bg black with fade
 
-    play music "footsteps.wav" noloop
+    play sound "footsteps.wav" noloop
 
     $ renpy.pause(3)
 
@@ -248,11 +254,11 @@ label start:
 
     scene bg black with fade
 
-    play music "wire.wav" noloop
+    play sound "wire.wav" noloop
 
     $ renpy.pause(2)
 
-    play music "footsteps.wav" noloop
+    play sound "footsteps.wav" noloop
 
     $ renpy.pause(3)
 
@@ -267,7 +273,9 @@ label start:
 
     scene bg black with fade
 
-    play music "chamber_door.mp3" noloop
+    stop music fadeout 1.0
+
+    play sound "chamber_door.mp3" noloop
 
     $ renpy.pause(6)
 
@@ -300,7 +308,7 @@ label start:
 
     l "OK, but what do you want from me?"
 
-    g "Well, I'm only residue after Philoson's - sound lovers ancient civilization" #Cóż, jestem jedyną pozostałością po Filosonach (gr. philos - kochający, esp. sono - dźwięk) - starożytnej cywilizacji miłośników dźwięku
+    g "Well, I'm only residue after Philosons - sound lovers ancient civilization" #Cóż, jestem jedyną pozostałością po Filosonach (gr. philos - kochający, esp. sono - dźwięk) - starożytnej cywilizacji miłośników dźwięku
     p "We were living here thousands years ago. Sound was our god. Over the years we were learning how to use useful sounds i.e. constructing more and more complicated musical instruments." #nie wiem czy dobrze robie z tym were
     p "Our time has passed, but you can keep our achievements alive." #będzie jakieś lepsze określenie na utrzymanie w sensie dorobku cywilizacji?
     p "Do you agree? That knowledge can be useful for humanity."
@@ -340,11 +348,11 @@ label start:
 
     scene bg chamber_fire with fade_end
     
-    queue voice [ "scream.wav", "bigfire.mp3" ] noloop
+    play voice "scream.wav"
 
     l "NOOO!{p=2.0}I can't leave him alone!" #nie mogę go zostawić
 
-    play music "bigfire.mp3" fadeout 1.0
+    play music "bigfire.mp3" fadein 1.0 fadeout 1.0
 
     l "Goodbye{cps=3}...{/cps}everybody..."
 
@@ -360,9 +368,20 @@ label start:
 
     scene bg black with fade_end
 
-    $ renpy.music.stop(channel="music")
+    $ renpy.music.set_volume(0.5, delay=0, channel="music")
 
-    n "TODO"
+    play voice "die_pain.mp3" noloop
+
+    centered "{size=48}Bad Ending...{/size}"
+
+
+    centered "{size=48}...and True Ending{/size}"
+
+    stop music fadeout 1.0
+
+    $ renpy.pause(2)
+
+    
 
 
 
@@ -380,13 +399,13 @@ label start:
 
     stop music fadeout(5)
 
-    $ renpy.pause(5)
+    $ renpy.pause(5, hard=True)
 
     l "He's gone...{p=2.0}Spadam stąd..."
 
     scene bg black with fade
 
-    play music "footsteps.wav" noloop
+    play sound "footsteps.wav" noloop
 
     $ renpy.pause(3)
 
@@ -394,7 +413,7 @@ label start:
 
     $ renpy.pause(1)
 
-    play music "wire.wav" noloop
+    play sound "wire.wav" noloop
 
     $ renpy.pause(2)
     
@@ -403,6 +422,8 @@ label start:
     $ renpy.pause(2)
 
     scene bg chamber_ruin with dissolve
+
+    play music "park.wav"
 
     play voice "scream.wav" noloop
     
@@ -429,6 +450,8 @@ label start:
     with fade_end
 
     centered "{size=48}Bad Ending{/size}"
+
+    stop music fadeout 2.0
 
     $ renpy.pause(2)
 
