@@ -53,7 +53,7 @@ label start:
 
     n "Lucas came back home..."
     l "Home, sweet home."
-    n "...sat in a chair...{p=1.0}...and turned on computer."
+    n "...sat in a chair...{p=1.0}...and turned computer on ."
 
     scene bg news with dissolve 
     with Pause(1)
@@ -62,11 +62,11 @@ label start:
     l "\"Speakers factory will be demolished\"{p=1.0}\"12 years after shutting down Silton speakers factory, townhall decided to deconstruct all its buildings.\""
     
     scene bg factory1 with dissolve
-    l "My dad have been working in Silton...{p=1.0}...because of love to sounds and music. He was true audiophile."
+    l "My dad has been working in Silton...{p=1.0}...because of love to sounds and music. He was a true audiophile."
     
     show columns with dissolve
 
-    l "Silton's column speakers were everywhere in country, part of products had been exported over entire world. world."
+    l "Silton's column speakers were everywhere in the country, part of products has been exported over the entire world."
 
     scene bg factory2 with dissolve
 
@@ -101,7 +101,7 @@ label start:
 
     scene bg terrain with dissolve
 
-    l "Hm...Coraz mniej tego zostało.{p=1.0}I'll look around. Maybe I'll shot few photos?"  #nie wiem jak to pierwsze przetłumaczyć
+    l "Hm...There is not much left.{p=1.0}I'll look around. Maybe I'll shoot a few photos?"
 
     scene bg black with fade
 
@@ -145,7 +145,7 @@ label start:
 
     scene bg brick with dissolve
 
-    l "Yet, another one of many bricks here."
+    l "Yet another one of many bricks here."
 
     play music "camerashot.wav" noloop
 
@@ -213,7 +213,7 @@ label start:
 
     scene bg entrance with dissolve
 
-    w "Hey, you! Get fuckin' out!!!"
+    w "Hey, you! Get the fuck out!!!"
 
     l "SHIT!{p=1.0}Maybe I'll continue next time..."
 
@@ -243,10 +243,10 @@ label start:
 
     scene bg chamber with dissolve
 
-    l "Wow! Anechoic Chamber! To o niej tyle mi opowiadał tata..." # anechoic chamber - komora bezechowa
-    l "Służyła ona do testowania kolumn - pomiary elektroakustyczne etc."
-    l "Podobno tak dobrze tłumi dźwięki z zewnątrz, że można usłyszeć bicie swojego serca..."
-    l "...ale od dłuższego pobytu w niej dostaje się halucynacji."
+    l "Wow! Anechoic Chamber! That's what my dad's stories where about..." # anechoic chamber - komora bezechowa
+    l "It was used to test speakers - electroacoustic measurements etc. etc."
+    l " it is said to dampen sounds so well that you can hear your heartbeat..."
+    l "...but after some time it can cause hallucinations."
 
     l "Well, check it out!"
 
@@ -263,7 +263,7 @@ label start:
     l "WOW! That's true!"
     l "My dream is coming real..."
 
-    n "Lucas listened his heartbeat..."
+    n "Lucas listened to his heartbeat..."
 
     stop music
     $ renpy.music.play("attackpad.mp3",loop=True,fadeout=1.0,fadein=1.0) 
