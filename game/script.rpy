@@ -10,6 +10,8 @@ define w = Character('Watchman', color="#eee62d")
 define g = Character('???', color="#99ccff")
 define p = Character('Philoson', color="#99ccff")
 #images and other
+
+
 init:
     image bg black = "#000000"
     image bg title = "title.png"
@@ -302,7 +304,7 @@ label start:
 
     n "Suddenly a weird sounds started surrounding Lucas..." #nagle Lucasa zaczęły otaczać dziwne dźwięki
 
-    n "Jakimś cudem dla Lucasa te dźwięki układały się w ludzki głos..."
+    n "By some miracle for Lucas these waves sounds like human voice..."
 
     g "Do you hear me?"
 
@@ -336,17 +338,17 @@ label start:
 
     scene bg black with dissolve
 
-    centered "Tego dnia Philoson przekazał Lucasowi cząstkę swojej wiedzy..."
+    centered "That day Philoson gave to Lucas a part of his knowledge..."
 
-    centered "Regularnie przychodził do komory karmić się wiedzą na temat technologii ich cywilizacji..."
+    centered "Lucas was regularly comming to the chamber to acquire informations about Philosons technologies..."
 
-    centered "Zaczął ją spisywać dla potomnych..."
+    centered "He has began to write this for posperity..."
 
     stop music fadeout(7)
 
     $ renpy.pause(7, hard=True)
 
-    centered "...aż do pewnego dnia..."
+    centered "...but one day..."
 
     play music "./sounds/firealarm.mp3" noloop
 
@@ -361,17 +363,24 @@ label start:
 
     l "Goodbye{cps=3}...{/cps}everybody..."
 
-
-
     scene bg chamber_fire_run1 with Dissolve(1)
+
+    $ renpy.pause(1, hard=True)
 
     scene bg chamber_fire_run2 with Dissolve(1)
 
+    $ renpy.pause(1, hard=True)
+
     scene bg chamber_fire_run3 with Dissolve(1)
+
+    $ renpy.pause(1, hard=True)
 
     scene bg chamber_fire_run4 with Dissolve(1)
 
+    $ renpy.pause(1, hard=True)
+
     scene bg black with fade_end
+
 
     $ renpy.music.set_volume(0.5, delay=0, channel="music")
 
@@ -406,7 +415,7 @@ label start:
 
     $ renpy.pause(5, hard=True)
 
-    l "He's gone...{p=2.0}Spadam stąd..."
+    l "He's gone...{p=2.0}Now time to go out..." #
 
     scene bg black with fade
 
@@ -438,16 +447,17 @@ label start:
 
     scene bg black with fade_end
 
-    show text "Zawiodłem..." at x1 as line1 with dissolve
+
+    show text "That was my big mistake..." at x1 as line1 with dissolve
     $ renpy.pause(3)
    
-    show text "Wiedza Philosonów przepadła..." at x2 as line2 with dissolve
+    show text "Philosons knowledge had been irretrievably lost..." at x2 as line2 with dissolve
     $ renpy.pause(3)       
    
-    show text "Nie jestem Elon Musk, ale ta wiedza rzeczywiście mogła się przydać ludziom, zwłaszcza takim jak on..." at x3 as line3 with dissolve
+    show text "I'm not scientist, but that all could be really useful for humanity..." at x3 as line3 with dissolve
     $ renpy.pause(3)
        
-    show text "Będę żałował tej decyzji do końca życia..." at x4 as line4 with dissolve
+    show text "Now I must live with the consequences of the choice I made..." at x4 as line4 with dissolve
     $ renpy.pause(3)
 
     hide line1
@@ -473,7 +483,7 @@ label start:
     show text "a visual novel game by Daniel \"TheLaw1337\" Sobczak \n for Ludum Dare 36" at c1 as line1 with dissolve
     $ renpy.pause(3)
    
-    show text "Thanks to weeman and kuba for text correction" at c2 as line2 with dissolve
+    show text "Thanks to weeman and Kuba for text correction" at c2 as line2 with dissolve
     $ renpy.pause(3) 
 
     show text "Thank you for playing" at c3 as line3 with dissolve
