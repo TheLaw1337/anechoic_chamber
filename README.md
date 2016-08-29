@@ -2,8 +2,12 @@
 VN game for Ludum Dare 36 by Daniel "TheLaw1337" Sobczak
 
 My first game ever for Ludum Dare 36.
+
+
 Special thanks to:
+
 weeman, Kuba - text corrections
+
 Aciek, Grim_Fandang0, Edeter, QwaKłak - you know for what ;)
 
 Most of photos are made myself. Sources of other:
