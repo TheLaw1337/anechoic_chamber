@@ -7,6 +7,7 @@ weeman, Kuba - text corrections
 Aciek, Grim_Fandang0, Edeter, QwaKłak - you know for what ;)
 
 Most of photos are made myself. Sources of other:
+
 http://www.eszkola-wielkopolska.pl/eszkola/projekty/liceum-wrzesnia/lo_wrzesnia/images/tonsil.jpg
 
 http://wrzesnia.powiat.pl/pub/uploadimages/popup/komora_bezechowa.jpg
