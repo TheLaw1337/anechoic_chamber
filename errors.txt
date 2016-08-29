@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 363: expected statement.
-    renpy.music.set_volume(0.6, delay=0, channel="music")
-                                                         ^
+File "game/script.rpy", line 473: end of line expected.
+    show text "Thanks to weeman and kuba for text correction" ct x2 as line2 with dissolve
+                                                              ^
 
 Ren'Py Version: Ren'Py 6.99.10.1227

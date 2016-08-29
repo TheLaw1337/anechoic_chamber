@@ -12,6 +12,7 @@ define p = Character('Philoson', color="#99ccff")
 #images and other
 init:
     image bg black = "#000000"
+    image bg title = "title.png"
     image bg room = "room.jpg"
     image bg news = "news3.jpg"
     image bg factory1 = "album1.jpg"
@@ -47,6 +48,10 @@ init:
     $ x3 = Position(xanchor = 0.5, xpos = 0.5, yalign = 0.6)
     $ x4 = Position(xanchor = 0.5, xpos = 0.5, yalign = 0.8)
 
+    $ c1 = Position(xanchor = 0.5, xpos = 0.5, yalign = 0.6)
+    $ c2 = Position(xanchor = 0.5, xpos = 0.5, yalign = 0.7)
+    $ c3 = Position(xanchor = 0.5, xpos = 0.5, yalign = 0.8)
+
 
     $ flash = Fade(.25, 0, .75, color="#fff")
     $ fade_end = Dissolve(5)
@@ -64,7 +69,7 @@ label start:
 
     hide text with fade
 
-    play music "door.wav" noloop
+    play music "./sounds/door.wav" noloop
 
     scene bg room with fade
 
@@ -93,11 +98,11 @@ label start:
 
     l "I need some fresh air, I'll go for a walk."
 
-    play music "door.wav" noloop
+    play music "./sounds/door.wav" noloop
 
     scene bg park with fade
 
-    play music "park.wav"
+    play music "./sounds/park.wav"
 
     n "The park has a long alley. Along the alley flows a little river.{p=1.0}Summer will end soon."
 
@@ -116,7 +121,7 @@ label start:
     
     scene bg black with fade
 
-    play sound "wire.wav" noloop
+    play sound "./sounds/wire.wav" noloop
 
     $ renpy.pause(2)
 
@@ -126,7 +131,7 @@ label start:
 
     scene bg black with fade
 
-    play sound "footsteps.wav" noloop
+    play sound "./sounds/footsteps.wav" noloop
 
     $ renpy.pause(3)
 
@@ -144,7 +149,7 @@ label start:
 
     l "Hobos were here..." #chodzi mi o żuli
 
-    play sound "camerashot.wav" noloop
+    play sound "./sounds/camerashot.wav" noloop
 
     scene bg terrain2 with flash
 
@@ -154,7 +159,7 @@ label start:
 
     l "Rubbish, rubbish, rubbish." #zdjęcie dołu ze śmieciami
 
-    play sound "camerashot.wav" noloop
+    play sound "./sounds/camerashot.wav" noloop
 
     scene bg rubbish with flash
 
@@ -168,7 +173,7 @@ label start:
 
     l "Yet another one of many bricks here."
 
-    play sound "camerashot.wav" noloop
+    play sound "./sounds/camerashot.wav" noloop
 
     scene bg brick with flash
 
@@ -178,7 +183,7 @@ label start:
 
     l "Cables from factory's bloodstream."
 
-    play sound "camerashot.wav" noloop
+    play sound "./sounds/camerashot.wav" noloop
 
     scene bg cables with flash
 
@@ -188,7 +193,7 @@ label start:
 
     l "This place was electroplating factory." #galwanizernia, przynajmniej tak powiedział Wujek Google :D
 
-    play sound "camerashot.wav" noloop
+    play sound "./sounds/camerashot.wav" noloop
 
     scene bg electroplating with flash
 
@@ -198,7 +203,7 @@ label start:
 
     l "Hm...{p=1.0}"
 
-    play sound "footsteps.wav" noloop
+    play sound "./sounds/footsteps.wav" noloop
 
     $ renpy.pause(1.5)
 
@@ -210,7 +215,7 @@ label start:
 
     l "Another trace of hobos..." #kolejny ślad po żulach (butelki po piwie)
 
-    play sound "camerashot.wav" noloop
+    play sound "./sounds/camerashot.wav" noloop
 
     scene bg beers with flash
 
@@ -220,7 +225,7 @@ label start:
 
     l "That's been a good photo..."
 
-    play sound "camerashot.wav" noloop
+    play sound "./sounds/camerashot.wav" noloop
 
     scene bg book with flash
 
@@ -228,7 +233,7 @@ label start:
 
     l "Done." 
 
-    play sound "footsteps.wav" noloop
+    play sound "./sounds/footsteps.wav" noloop
 
     $ renpy.pause(3)
 
@@ -240,7 +245,7 @@ label start:
 
     scene bg black with fade
 
-    play sound "footsteps.wav" noloop
+    play sound "./sounds/footsteps.wav" noloop
 
     $ renpy.pause(3)
 
@@ -254,11 +259,11 @@ label start:
 
     scene bg black with fade
 
-    play sound "wire.wav" noloop
+    play sound "./sounds/wire.wav" noloop
 
     $ renpy.pause(2)
 
-    play sound "footsteps.wav" noloop
+    play sound "./sounds/footsteps.wav" noloop
 
     $ renpy.pause(3)
 
@@ -275,13 +280,13 @@ label start:
 
     stop music fadeout 1.0
 
-    play sound "chamber_door.mp3" noloop
+    play sound "./sounds/chamber_door.mp3" noloop
 
     $ renpy.pause(6)
 
     scene bg chamber_inside with dissolve
 
-    play music "heartbeat.wav" loop
+    play music "./sounds/heartbeat.wav" loop
 
     l "WOW! That's true!"
     l "My dream is coming real..."
@@ -289,7 +294,7 @@ label start:
     n "Lucas listened to his heartbeat..."
 
     stop music fadeout(2)
-    $ renpy.music.play("attackpad.mp3",loop=True,fadeout=1.0,fadein=1.0) 
+    $ renpy.music.play("./sounds/attackpad.mp3",loop=True,fadeout=1.0,fadein=1.0) 
 
     $ renpy.pause(3)
 
@@ -343,16 +348,16 @@ label start:
 
     centered "...aż do pewnego dnia..."
 
-    play music "firealarm.mp3" noloop
+    play music "./sounds/firealarm.mp3" noloop
 
 
     scene bg chamber_fire with fade_end
     
-    play voice "scream.wav"
+    play voice "./sounds/scream.wav"
 
     l "NOOO!{p=2.0}I can't leave him alone!" #nie mogę go zostawić
 
-    play music "bigfire.mp3" fadein 1.0 fadeout 1.0
+    play music "./sounds/bigfire.mp3" fadein 1.0 fadeout 1.0
 
     l "Goodbye{cps=3}...{/cps}everybody..."
 
@@ -370,7 +375,7 @@ label start:
 
     $ renpy.music.set_volume(0.5, delay=0, channel="music")
 
-    play voice "die_pain.mp3" noloop
+    play voice "./sounds/die_pain.mp3" noloop
 
     centered "{size=48}Bad Ending...{/size}"
 
@@ -379,7 +384,7 @@ label start:
 
     stop music fadeout 1.0
 
-    $ renpy.pause(2)
+    jump credits
 
     
 
@@ -405,27 +410,29 @@ label start:
 
     scene bg black with fade
 
-    play sound "footsteps.wav" noloop
+    play sound "./sounds/footsteps.wav" noloop
 
     $ renpy.pause(3)
 
-    centered "{size=36}Few months later...{/size}"
+    centered "{size=36}Few weeks later...{/size}"
 
     $ renpy.pause(1)
 
-    play sound "wire.wav" noloop
+    play music "./sounds/park.wav"
+
+    play sound "./sounds/wire.wav" noloop
 
     $ renpy.pause(2)
     
-    play music "footsteps.wav" noloop
+    play sound "./sounds/footsteps.wav" noloop
 
     $ renpy.pause(2)
 
     scene bg chamber_ruin with dissolve
 
-    play music "park.wav"
+    
 
-    play voice "scream.wav" noloop
+    play voice "./sounds/scream.wav" noloop
     
     l "NOOO!"
 
@@ -453,10 +460,30 @@ label start:
 
     stop music fadeout 2.0
 
-    $ renpy.pause(2)
+    jump credits
 
 
     return
 
 
+    label credits:
 
+    scene bg title with fade_end
+
+    show text "a visual novel game by Daniel \"TheLaw1337\" Sobczak \n for Ludum Dare 36" at c1 as line1 with dissolve
+    $ renpy.pause(3)
+   
+    show text "Thanks to weeman and kuba for text correction" at c2 as line2 with dissolve
+    $ renpy.pause(3) 
+
+    show text "Thank you for playing" at c3 as line3 with dissolve
+    $ renpy.pause(3) 
+
+    scene bg black with dissolve
+
+    hide line1
+    hide line2
+    hide line3
+    with fade_end
+
+    return
